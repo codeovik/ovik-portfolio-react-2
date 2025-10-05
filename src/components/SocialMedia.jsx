@@ -45,7 +45,7 @@ export default function SocialMedia() {
           href={item.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="dark:bg-white/10 bg-black cursor-pointer rounded-full h-11 md:h-12 transition-colors aspect-square dark:hover:bg-white/20 hover:bg-black/20 flex justify-center items-center"
+          className="dark:bg-white/10 bg-black/10 cursor-pointer rounded-full h-11 md:h-12 transition-colors aspect-square dark:hover:bg-white/20 hover:bg-black/20 flex justify-center items-center"
         >
           <FontAwesomeIcon icon={item.icon} className="text-lg md:text-xl" />
         </a>

@@ -1,28 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html class="[&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-primary/50 [&::-webkit-scrollbar-thumb]:rounded-full" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ovik - Personal Portfolio React & Tailwind Template</title>
+  </head>
+  <body class="text-black dark:text-white bg-white dark:bg-[#030303] selection:bg-primary/70">
+    <div id="root"></div>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="./src/assets/images/favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ovik - Personal Portfolio React & Tailwind Template</title>
-</head>
+    <!-- javascript fallback -->
+    <noscript class="p-4 text-center bg-yellow-50 text-yellow-900">
+      This demo requires JavaScript to run. Please enable JavaScript in your browser to view the preview.
+    </noscript>
 
-<body class="text-black dark:text-white bg-white dark:bg-[#030303] selection:bg-primary/70">
-  <div id="root"></div>
+    <!-- emailjs -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "YOUR_PUBLIC_KEY",
+        });
+      })();
+    </script>
 
-  <!-- emailjs -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init({
-        publicKey: "YOUR_PUBLIC_KEY",
-      });
-    })();
-  </script>
-
-  <script type="module" src="/src/main.jsx"></script>
-</body>
-
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

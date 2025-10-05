@@ -191,7 +191,7 @@ export default function Navbar() {
             {/* menu bar */}
             <div
                 ref={menuBarRef}
-                className="fixed top-0 -right-full h-screen bg-white dark:bg-[#030303] min-[450px]:w-96 w-9/10 z-40 p-10 overflow-y-scroll [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-blue-500/50 [&::-webkit-scrollbar-thumb]:rounded-full"
+                className="fixed top-0 -right-full h-screen bg-white dark:bg-[#030303] min-[450px]:w-96 w-9/10 z-40 p-10 overflow-y-scroll [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-primary [&::-webkit-scrollbar-thumb]:rounded-full"
             >
                 {/* dark mode toggle button */}
                 <button
