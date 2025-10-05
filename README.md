@@ -2,6 +2,11 @@
 A professional, modern, and responsive React & Tailwind CSS portfolio SASS template for developers, designers, freelancers, and agencies to showcase their work and services. This template is designed to help you create a stunning online presence and attract potential clients.
 ![ovik-react-screenshort](https://ovikbiswas.wordpress.com/wp-content/uploads/2025/10/ovik-react-screenshort.png)
 
+### Links
+- [Live Demo](https://ovik-portfolio-react-2.vercel.app/)
+- [Purchase on ThemeForest](https://ovik-portfolio-react-2.vercel.app/)
+- [Github Repo](https://github.com/codeovik/ovik-portfolio-react-2)
+
 ### Technologies Used
 - React
 - Tailwind CSS
