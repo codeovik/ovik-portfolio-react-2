@@ -4,22 +4,34 @@ import gsap from 'gsap'
 import AnimatedText from './AnimatedText'
 import ScrollReveal from 'scrollreveal';
 
+// import all stack images
+import reactLogo from '/images/stack-react.png'
+import canvaLogo from '/images/stack-canva.png'
+import figmaLogo from '/images/stack-figma.png'
+import gitLogo from '/images/stack-git.png'
+import githubLogo from '/images/stack-github.png'
+import htmlLogo from '/images/stack-html.png'
+import mongodbLogo from '/images/stack-mongodb.png'
+import nextjsLogo from '/images/stack-nextjs.png'
+import nodejsLogo from '/images/stack-nodejs.png'
+import tailwindLogo from '/images/stack-tailwindcss.png'
+
 // gsap initialize
 gsap.registerPlugin(ScrollTrigger)
 
 // data
 const stackItems = [
-    { name: 'React js', image: '/images/stack-react.png' },
-    { name: 'Canva', image: '/images/stack-canva.png' },
-    { name: 'Figma', image: '/images/stack-figma.png' },
-    { name: 'Git', image: '/images/stack-git.png' },
-    { name: 'GitHub', image: '/images/stack-github.png' },
-    { name: 'HTML', image: '/images/stack-html.png' },
-    { name: 'MongoDB', image: '/images/stack-mongodb.png' },
-    { name: 'Next.js', image: '/images/stack-nextjs.png' },
-    { name: 'Node.js', image: '/images/stack-nodejs.png' },
-    { name: 'Tailwind CSS', image: '/images/stack-tailwindcss.png' }
-];
+  { name: 'React js', image: reactLogo },
+  { name: 'Canva', image: canvaLogo },
+  { name: 'Figma', image: figmaLogo },
+  { name: 'Git', image: gitLogo },
+  { name: 'GitHub', image: githubLogo },
+  { name: 'HTML', image: htmlLogo },
+  { name: 'MongoDB', image: mongodbLogo },
+  { name: 'Next.js', image: nextjsLogo },
+  { name: 'Node.js', image: nodejsLogo },
+  { name: 'Tailwind CSS', image: tailwindLogo },
+]
 
 const TechStack = () => {
     useEffect(() => {

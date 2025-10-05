@@ -3,18 +3,30 @@ import "swiper/css"
 import { Autoplay } from 'swiper/modules'
 import AnimatedText from './AnimatedText'
 
+// import all logos
+import googleLogo from '/images/company-google.png'
+import nikeLogo from '/images/company-nike.png'
+import notionLogo from '/images/company-notion.png'
+import openaiLogo from '/images/company-openai.png'
+import oppoLogo from '/images/company-oppo.png'
+import shopifyLogo from '/images/company-shopify.png'
+import upworkLogo from '/images/company-upwork.png'
+import varcelLogo from '/images/company-varcel.png'
+import godotLogo from '/images/company-godot.png'
+import dropboxLogo from '/images/company-dropbox.png'
+
 // data
 const partners = [
-  { src: "/images/company-google.png", alt: "Google" },
-  { src: "/images/company-nike.png", alt: "Nike" },
-  { src: "/images/company-notion.png", alt: "Notion" },
-  { src: "/images/company-openai.png", alt: "OpenAI" },
-  { src: "/images/company-oppo.png", alt: "Oppo" },
-  { src: "/images/company-shopify.png", alt: "Shopify" },
-  { src: "/images/company-upwork.png", alt: "Upwork" },
-  { src: "/images/company-varcel.png", alt: "Vercel" },
-  { src: "/images/company-godot.png", alt: "Godot" },
-  { src: "/images/company-dropbox.png", alt: "Dropbox" },
+  { src: googleLogo, alt: "Google" },
+  { src: nikeLogo, alt: "Nike" },
+  { src: notionLogo, alt: "Notion" },
+  { src: openaiLogo, alt: "OpenAI" },
+  { src: oppoLogo, alt: "Oppo" },
+  { src: shopifyLogo, alt: "Shopify" },
+  { src: upworkLogo, alt: "Upwork" },
+  { src: varcelLogo, alt: "Vercel" },
+  { src: godotLogo, alt: "Godot" },
+  { src: dropboxLogo, alt: "Dropbox" },
 ];
 
 const infinitePartner = Array(10).fill(partners).flat();

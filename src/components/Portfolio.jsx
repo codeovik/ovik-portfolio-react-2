@@ -4,36 +4,43 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import AnimatedText from './AnimatedText'
 
+// import all portfolio images
+import aiImageGenerator from '/images/portfolio-ai-image-generator.jpg'
+import fitnessApp from '/images/portfolio-fitness-app.jpg'
+import carWebsite from '/images/portfolio-car.jpg'
+import coffeeShop from '/images/portfolio-coffe-shop-website.jpg'
+import treeHouse from '/images/portfolio-tree-house.jpg'
+
 // gsap initialize
 gsap.registerPlugin(ScrollTrigger)
 
 // data
 const portfolioItems = [
   {
+    title: "AI image generator website API development using Python",
+    image: aiImageGenerator,
     videoKey: "tZIsF3JRDxI?si=OuKRWRJ-ECyM82zJ",
-    image: "/images/portfolio-ai-image-generator.jpg",
-    title: "AI image generator website API development using python"
   },
   {
+    title: "Fitness web app UI design and development",
+    image: fitnessApp,
     videoKey: "we3vz5NispM?si=HS4MmqXsgfoB6cKB",
-    image: "/images/portfolio-fitness-app.jpg",
-    title: "Fitness web app UI desing and development"
   },
   {
+    title: "Car website landing page development",
+    image: carWebsite,
     videoKey: "hu9KHE37Euc?si=A5ITX-W9fQs1eUoR",
-    image: "/images/portfolio-car.jpg",
-    title: "Car website landing page development"
   },
   {
+    title: "Coffee shop website API problem fixed",
+    image: coffeeShop,
     videoKey: "6ytQCyCVqDA?si=H06GKPhCalE5nwUF",
-    image: "/images/portfolio-coffe-shop-website.jpg",
-    title: "Coffe shop website API problem fixed"
   },
   {
+    title: "3D Tree house architecture design using Minimax",
+    image: treeHouse,
     videoKey: "gx9m5qyDu0Y?si=tItCfltvX9prmolC",
-    image: "/images/portfolio-tree-house.jpg",
-    title: "3D Tree house architecture desing using Minimax"
-  }
+  },
 ];
 
 const Portfolio = () => {
