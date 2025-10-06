@@ -11,7 +11,7 @@ import carWebsite from '/images/portfolio-car.jpg'
 import coffeeShop from '/images/portfolio-coffe-shop-website.jpg'
 import treeHouse from '/images/portfolio-tree-house.jpg'
 
-// gsap initialize
+// gsap plugin initialize
 gsap.registerPlugin(ScrollTrigger)
 
 // data
@@ -81,7 +81,10 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <section id="portfolio" className="bg-white dark:bg-[#030303] mt-30">
+    <section
+      id="portfolio"
+      className="bg-white dark:bg-[#030303] mt-30"
+    >
       <div className="px-7 lg:px-12 mx-auto max-w-[1600px] grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-5">
         {/* title */}
         <div className="text-content h-max">
@@ -93,7 +96,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        {/* items fetch from array */}
+        {/* fetch items from array */}
         <OpenVideo />
         <div className="main-content space-y-8">
           {portfolioItems.map((item, index) => (

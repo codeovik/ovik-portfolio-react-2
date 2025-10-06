@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import AnimatedText from './AnimatedText'
 import ScrollReveal from 'scrollreveal'
 
-// gsap initialize
+// gsap plugin initialize
 gsap.registerPlugin(ScrollTrigger)
 
 // data
@@ -54,24 +54,27 @@ const Experience = () => {
     };
   }, []);
 
-    // scroll reveal
-    useEffect(() => {
-        ScrollReveal().reveal(".exprience-items", {
-            origin: 'bottom',
-            distance: '100px',
-            duration: 800,
-            easing: 'ease-out',
-            interval: 200,
-            reset: true,
-            once: false,
-            opacity: 0,
-        });
-    }, []);
+  // scroll reveal items
+  useEffect(() => {
+    ScrollReveal().reveal(".exprience-items", {
+      origin: 'bottom',
+      distance: '70px',
+      duration: 500,
+      easing: 'ease-out',
+      interval: 200,
+      reset: true,
+      once: false,
+      opacity: 0,
+    });
+  }, []);
 
   return (
-    <section id="experience" className="bg-white dark:bg-[#030303] mt-30">
+    <section
+      id="experience"
+      className="bg-white dark:bg-[#030303] mt-30"
+    >
       <div className="px-7 lg:px-12 mx-auto max-w-[1600px] grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-5">
-        {/* title and subtitle */}
+        {/* title */}
         <div className="text-content h-max">
           <AnimatedText className="md:text-7xl text-4xl text-center lg:text-left md:font-medium">
             Work Experience Highlights
@@ -81,7 +84,7 @@ const Experience = () => {
           </p>
         </div>
 
-        {/* items fetch from array */}
+        {/* fetch items from array */}
         <div className="main-content space-y-5">
           {experienceData.map((item, index) => (
             <div

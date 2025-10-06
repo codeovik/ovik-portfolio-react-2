@@ -18,7 +18,7 @@ const Hero = () => {
   const imageRef = useRef(null);
   const titleRef = useRef(null);
   const descRef = useRef(null);
-  const buttons = useRef(null);
+  const buttonContainerRef = useRef(null);
   const skill = useRef(null);
 
   // typewriter effect
@@ -38,7 +38,7 @@ const Hero = () => {
     };
   }, []);
 
-  // tilt effect
+  // tilt effect in image
   useEffect(() => {
     if (imageRef.current) {
       VanillaTilt.init(imageRef.current, {
@@ -80,14 +80,18 @@ const Hero = () => {
         },
       })
       // button animation
-      gsap.set(buttons.current, { y: 50, opacity: 0 });
-      gsap.to(buttons.current, {
+      const buttons = gsap.utils.toArray(
+        buttonContainerRef.current.querySelectorAll("a, button")
+      );
+      gsap.set(buttons, { y: 80, opacity: 0 });
+      gsap.to(buttons, {
         y: 0,
+        stagger: 0.3,
         opacity: 1,
         duration: 0.6,
-        delay: 2,
+        delay: 1.5,
         scrollTrigger: {
-          trigger: buttons.current,
+          trigger: buttonContainerRef.current,
           toggleActions: "play reverse play reverse",
         },
       });
@@ -108,7 +112,7 @@ const Hero = () => {
 
   return (
     <header
-      id="hero"
+      id="home"
       className="px-7 lg:px-12 mx-auto max-w-[1600px] grid mt-5 grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-5 items-center"
     >
       {/* hero image */}
@@ -144,11 +148,11 @@ const Hero = () => {
         <SocialMedia />
 
         {/* button */}
-        <div ref={buttons} className="gap-2 flex flex-col md:flex-row">
+        <div ref={buttonContainerRef} className="gap-2 flex flex-col md:flex-row">
           <LinkButton href="#" primary={false}>Start A Project</LinkButton>
 
           <OpenVideo />
-          <ActionButton onClick={() => openVideoModal("eUQ6yZLF_4I?si=gLSjhkUw3WG53or9")} primary={true/false}>Watch Intro</ActionButton>
+          <ActionButton onClick={() => openVideoModal("eUQ6yZLF_4I?si=gLSjhkUw3WG53or9")} primary={true / false}>Watch Intro</ActionButton>
         </div>
 
       </div>

@@ -208,9 +208,14 @@ export default function Navbar() {
                 {/* menu lists */}
                 <p ref={menuListTitleRef} className="before:absolute before:aspect-square before:h-1 before:bg-black dark:before:bg-white relative pl-5 before:transform before:-translate-y-1/2 before:top-1/2 before:left-0 before:rounded-full">Menu</p>
                 <ul className="text-3xl space-y-3 font-medium group">
-                    {['Home', 'Achievements', 'Colaborate', 'Exprience', 'Portfolio', 'Plan', 'Testimonial', 'Tech Stack', 'Contact', 'Faq'].map((item, index) => (
+                    {['Home', 'Achievements', 'Partner', 'Exprience', 'Portfolio', 'Pricing', 'Testimonial', 'Tech Stack', 'Contact', 'Faq'].map((item, index) => (
                         <li key={item} ref={el => menuListItemsRef.current[index] = el}>
-                            <a href={`#${item.toLowerCase()}`} className="group-hover:opacity-50 hover:opacity-100 transition-all">{item}</a>
+                            <a
+                                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                                className="group-hover:opacity-50 hover:opacity-100 transition-all"
+                            >
+                                {item}
+                            </a>
                         </li>
                     ))}
                 </ul>

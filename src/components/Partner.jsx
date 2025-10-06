@@ -33,7 +33,10 @@ const infinitePartner = Array(10).fill(partners).flat();
 
 export default function Partner() {
   return (
-    <section className="dark:bg-[#030303] bg-white mt-30">
+    <section
+      className="dark:bg-[#030303] bg-white mt-30"
+      id="partner"
+    >
       {/* title */}
       <AnimatedText className="md:text-4xl text-xl lg:w-[800px] w-[80%] mx-auto lg:px-12">
         <span className="before:absolute before:aspect-square before:h-1 before:bg-black dark:before:bg-white relative pl-5 before:transform before:-translate-y-1/2 before:top-1/2 before:left-0 before:rounded-full text-base pr-20 bottom-2 opacity-80">
@@ -56,6 +59,7 @@ export default function Partner() {
         }}
         className="mySwiper mt-12 !overflow-hidden px-7 lg:px-12 mx-auto max-w-[1600px] w-full selection:bg-transparent after:h-full after:w-20 md:after:w-50 after:bg-linear-to-r after:from-transparent after:to-white dark:after:to-[#030303] after:z-1 relative after:absolute after:top-0 after:right-0 before:absolute before:left-0 before:h-full md:before:w-50 before:w-20 before:bg-linear-to-r before:from-white dark:before:from-[#030303] before:to-transparent before:z-2"
       >
+        {/* fetch items from array */}
         {infinitePartner.map((partner, index) => (
           <SwiperSlide key={index} className="!w-max">
             <img

@@ -75,7 +75,10 @@ const testimonials = [
 
 const Review = () => {
     return (
-        <section id="testimonial" className="bg-white dark:bg-[#030303] mt-30">
+        <section
+            id="testimonial"
+            className="bg-white dark:bg-[#030303] mt-30"
+        >
             <div className="px-7 lg:px-12 mx-auto max-w-[1600px] grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-5">
                 {/* title */}
                 <div className="text-content">
@@ -87,7 +90,7 @@ const Review = () => {
                     </p>
                 </div>
                 <div className="main-content overflow-hidden">
-                    {/* swiper js intregation */}
+                    {/* review slide */}
                     <Swiper
                         effect={'cards'}
                         grabCursor={true}
@@ -100,7 +103,7 @@ const Review = () => {
                         modules={[EffectCards, Autoplay]}
                         className="testimonial-slide md:w-110 overflow-hidden md:h-90 w-[95%]"
                     >
-                        {/* items fetch from array */}
+                        {/* fetch items from array */}
                         {testimonials.map((testimonial, index) => (
                             <SwiperSlide key={index} className="rounded-2xl md:rounded-3xl p-3 md:p-4 space-y-5 bg-light dark:bg-dark">
                                 <div className="flex gap-3">

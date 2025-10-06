@@ -9,8 +9,8 @@ export default function Footer() {
   useEffect(() => {
     ScrollReveal().reveal(".footer-items", {
       origin: 'bottom',
-      distance: '100px',
-      duration: 800,
+      distance: '70px',
+      duration: 500,
       easing: 'ease-out',
       interval: 200,
       reset: true,
@@ -18,16 +18,16 @@ export default function Footer() {
       opacity: 0,
     });
   }, []);
-  
-  // scroll reveal footer footer-menu-items
+
+  // scroll reveal footer footer menu list items
   useEffect(() => {
     ScrollReveal().reveal(".footer-menu-items", {
       origin: 'bottom',
-      distance: '100px',
-      duration: 800,
+      distance: '70px',
+      duration: 500,
       easing: 'ease-out',
       interval: 200,
-      delay: 3,
+      delay: 5,
       reset: true,
       once: false,
       opacity: 0,
@@ -60,9 +60,14 @@ export default function Footer() {
         {/* menu list */}
         <div className="footer-items bg-light dark:bg-dark hover:bg-light/70 dark:hover:bg-dark/70 transition-all p-5 md:p-10 rounded-2xl lg:rounded-3xl">
           <ul className="text-xl md:text-3xl space-y-2 md:space-y-4 font-medium group">
-            {['Home', 'Achievements', 'Colaborate', 'Exprience', 'Portfolio', 'Plan', 'Testimonial', 'Tech Stack', 'Contact', 'Faq'].map((item, index) => (
+            {['Home', 'Achievements', 'Partner', 'Exprience', 'Portfolio', 'Pricing', 'Testimonial', 'Tech Stack', 'Contact', 'Faq'].map((item, index) => (
               <li key={item}>
-                <a href={`#${item.toLowerCase()}`} className="footer-menu-items group-hover:opacity-50 hover:opacity-100 transition-all">{item}</a>
+                <a
+                  href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="footer-menu-items group-hover:opacity-50 hover:opacity-100 transition-all"
+                >
+                  {item}
+                </a>
               </li>
             ))}
           </ul>

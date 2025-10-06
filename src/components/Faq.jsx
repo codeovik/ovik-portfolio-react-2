@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import AnimatedText from './AnimatedText'
 import ScrollReveal from 'scrollreveal'
 
-// gsap initialize
+// gsap plugin initialize
 gsap.registerPlugin(ScrollTrigger);
 
 // data
@@ -61,7 +61,7 @@ const Faq = () => {
         icon.textContent = "–"; // add "-" icon by replacing "+"
     };
 
-    // items animation on scroll
+    // text scroll pin for desktop
     useEffect(() => {
         const mm = gsap.matchMedia();
         mm.add("(min-width: 1024px)", () => {
@@ -76,12 +76,12 @@ const Faq = () => {
         return () => mm.revert();
     }, []);
 
-    // scroll reveal
+    // scroll reveal items
     useEffect(() => {
         ScrollReveal().reveal(".faq-item", {
             origin: 'bottom',
-            distance: '100px',
-            duration: 800,
+            distance: '70px',
+            duration: 500,
             easing: 'ease-out',
             interval: 200,
             reset: true,
@@ -91,7 +91,10 @@ const Faq = () => {
     }, []);
 
     return (
-        <section id="faq" className="bg-white dark:bg-[#030303] mt-30">
+        <section
+            id="faq"
+            className="bg-white dark:bg-[#030303] mt-30"
+        >
             <div className="px-7 lg:px-12 mx-auto max-w-[1600px] grid grid-cols-1 lg:grid-cols-[2fr_3fr] md:gap-5 gap-3">
                 <div className="text-content">
                     {/* title */}
@@ -103,7 +106,7 @@ const Faq = () => {
                     </p>
                 </div>
 
-                {/* items fetch from array */}
+                {/* fetch items from array */}
                 <div className="main-content space-y-3">
                     {faqData.map((faq, index) => (
                         <div key={index} className="faq-item dark:hover:bg-dark/70 dark:bg-dark bg-light hover:bg-light/70 text-sm md:text-xl transition-all rounded-2xl md:rounded-3xl overflow-hidden">

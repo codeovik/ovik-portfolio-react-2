@@ -71,7 +71,10 @@ const Pricing = () => {
   );
 
   return (
-    <section id="plan" className="bg-white dark:bg-[#030303] mt-30">
+    <section
+      id="pricing"
+      className="bg-white dark:bg-[#030303] mt-30"
+    >
       <div className="px-7 lg:px-12 mx-auto max-w-[1600px] grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-5">
         {/* title */}
         <div className="text-content">
@@ -95,7 +98,7 @@ const Pricing = () => {
             ))}
           </div>
 
-          {/* item fetch from array */}
+          {/* fetch items from array */}
           {Object.keys(plans).map(plan => (
             <PlanCard key={plan} plan={plan} isActive={activePlan === plan} />
           ))}

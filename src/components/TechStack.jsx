@@ -16,22 +16,22 @@ import nextjsLogo from '/images/stack-nextjs.png'
 import nodejsLogo from '/images/stack-nodejs.png'
 import tailwindLogo from '/images/stack-tailwindcss.png'
 
-// gsap initialize
-gsap.registerPlugin(ScrollTrigger)
-
 // data
 const stackItems = [
-  { name: 'React js', image: reactLogo },
-  { name: 'Canva', image: canvaLogo },
-  { name: 'Figma', image: figmaLogo },
-  { name: 'Git', image: gitLogo },
-  { name: 'GitHub', image: githubLogo },
-  { name: 'HTML', image: htmlLogo },
-  { name: 'MongoDB', image: mongodbLogo },
-  { name: 'Next.js', image: nextjsLogo },
-  { name: 'Node.js', image: nodejsLogo },
-  { name: 'Tailwind CSS', image: tailwindLogo },
-]
+    { name: 'React js', image: reactLogo },
+    { name: 'Canva', image: canvaLogo },
+    { name: 'Figma', image: figmaLogo },
+    { name: 'Git', image: gitLogo },
+    { name: 'GitHub', image: githubLogo },
+    { name: 'HTML', image: htmlLogo },
+    { name: 'MongoDB', image: mongodbLogo },
+    { name: 'Next.js', image: nextjsLogo },
+    { name: 'Node.js', image: nodejsLogo },
+    { name: 'Tailwind CSS', image: tailwindLogo },
+];
+
+// gsap initialize
+gsap.registerPlugin(ScrollTrigger)
 
 const TechStack = () => {
     useEffect(() => {
@@ -52,12 +52,12 @@ const TechStack = () => {
         };
     }, []);
 
-    // scroll reveal
+    // scroll reveal items
     useEffect(() => {
         ScrollReveal().reveal(".stack-items", {
             origin: 'bottom',
-            distance: '0px',
-            duration: 800,
+            distance: '70px',
+            duration: 500,
             easing: 'ease-out',
             interval: 200,
             reset: true,
@@ -66,9 +66,11 @@ const TechStack = () => {
         });
     }, []);
 
-
     return (
-        <section id="tech-stack" className="bg-white dark:bg-[#030303] mt-30">
+        <section
+            id="tech-stack"
+            className="bg-white dark:bg-[#030303] mt-30"
+        >
             <div className="px-7 lg:px-12 mx-auto max-w-[1600px] grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-5">
                 {/* title */}
                 <div className="text-content">
@@ -79,7 +81,7 @@ const TechStack = () => {
                         A showcase of the tools, frameworks, and technologies I use to build modern, scalable, and high-performing web and mobile applications.
                     </p>
                 </div>
-                {/* item fetch from array */}
+                {/* fetch items from array */}
                 <div className="main-content grid grid-cols-2 md:grid-cols-3 gap-4">
                     {stackItems.map((item, index) => (
                         <div

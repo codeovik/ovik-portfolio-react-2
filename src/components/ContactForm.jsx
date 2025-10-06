@@ -70,8 +70,8 @@ export default function ContactForm() {
     useEffect(() => {
         ScrollReveal().reveal('.form-items', {
             origin: 'bottom',
-            distance: '100px',
-            duration: 800,
+            distance: '70px',
+            duration: 500,
             easing: 'ease-out',
             interval: 200,
             reset: true,
@@ -81,7 +81,10 @@ export default function ContactForm() {
     }, []);
 
     return (
-        <section className="bg-white dark:bg-[#030303] mt-30">
+        <section
+            id="contact"
+            className="bg-white dark:bg-[#030303] mt-30"
+        >
             {/* title */}
             <AnimatedText className="md:text-4xl text-xl lg:w-[800px] w-[80%] mx-auto lg:px-12">
                 <span className="before:absolute before:aspect-square before:h-1 before:bg-black dark:before:bg-white relative pl-5 before:transform before:-translate-y-1/2 before:top-1/2 before:left-0 before:rounded-full text-base pr-20 bottom-2 opacity-80">
@@ -136,7 +139,7 @@ export default function ContactForm() {
                     <button
                         type="button"
                         onClick={saveDraft}
-                        className="px-7 flex cursor-pointer gap-1 justify-center group md:w-max w-full py-3 bg-black/10 hover:bg-black/20 dark:bg-white/10 dark:hover:bg-white/20 transition-all items-center rounded-full"
+                        className="form-items px-7 flex cursor-pointer gap-1 justify-center group md:w-max w-full py-3 bg-black/10 hover:bg-black/20 dark:bg-white/10 dark:hover:bg-white/20 transition-all items-center rounded-full"
                     >
                         <span>Save Draft</span>
                         <span className="relative overflow-hidden">
@@ -148,8 +151,7 @@ export default function ContactForm() {
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className={`px-7 flex gap-1 justify-center group md:w-max w-full py-3 bg-primary hover:bg-primary/70 transition-all items-center rounded-full ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'
-                            }`}
+                        className={`form-items px-7 flex gap-1 justify-center group md:w-max w-full py-3 bg-primary hover:bg-primary/70 transition-all items-center rounded-full ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
                     >
                         <span>
                             {isSubmitting ? 'Submitting...' : 'Submit'}
@@ -202,10 +204,10 @@ export default function ContactForm() {
 
             {/* email */}
             <div className="flex flex-col justify-center text-center gap-1 mt-10">
-                <p className="text-lg opacity-80">or, mail me directly at</p>
+                <p className="form-items text-lg opacity-80">or, mail me directly at</p>
                 <a
                     href="mailto:me@codeovik.com"
-                    className="relative hover:text-primary transition-all w-max mx-auto inline-block text-3xl md:text-6xl after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-black dark:after:bg-white hover:after:bg-primary after:transition-all after:content-['']"
+                    className="form-items relative hover:text-primary transition-all w-max mx-auto inline-block text-3xl md:text-6xl after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-black dark:after:bg-white hover:after:bg-primary after:transition-all after:content-['']"
                 >
                     me@codeovik.com
                 </a>

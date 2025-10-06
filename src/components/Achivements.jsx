@@ -5,7 +5,7 @@ import Odometer from 'odometer'
 import 'odometer/themes/odometer-theme-minimal.css'
 import AnimatedText from './AnimatedText'
 
-// gsap initialize
+// gsap plugin initialize
 gsap.registerPlugin(ScrollTrigger)
 
 // data
@@ -51,7 +51,10 @@ export default function Achievements() {
   }, []);
 
   return (
-    <div className="px-6 md:px-20 mt-30">
+    <section
+      className="px-6 md:px-20 mt-30"
+      id="achievements"
+    >
       {/* title */}
       <AnimatedText className="md:text-4xl text-xl lg:w-[800px] w-[80%] mx-auto lg:px-12">
         <span className="before:absolute before:aspect-square before:h-1 before:bg-black dark:before:bg-white relative pl-5 before:transform before:-translate-y-1/2 before:top-1/2 before:left-0 before:rounded-full text-base pr-20 bottom-2 opacity-80">
@@ -60,7 +63,7 @@ export default function Achievements() {
         Celebrating the journey so far with impactful numbers that define our success
       </AnimatedText>
 
-      {/* items fetch from array */}
+      {/* fetch items from array */}
       <div className="grid md:grid-cols-3 gap-8 mt-5">
         {achievementData.map((item, index) => (
           <div
@@ -75,6 +78,6 @@ export default function Achievements() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   )
 }

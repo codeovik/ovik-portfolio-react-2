@@ -3,43 +3,49 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// import icons
+// import all icons
 import { faGithub, faTwitter, faLinkedin, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
+// data
+const icons = [
+  { icon: faGithub, url: "https://github.com/" },
+  { icon: faTwitter, url: "https://twitter.com/" },
+  { icon: faLinkedin, url: "https://linkedin.com/" },
+  { icon: faFacebook, url: "https://facebook.com/" },
+];
+
+// gsap plugin initialize
 gsap.registerPlugin(ScrollTrigger);
 
 export default function SocialMedia() {
+  // refs
   const containerRef = useRef(null);
 
-  // icon + url array
-  const icons = [
-    { icon: faGithub, url: "https://github.com/" },
-    { icon: faTwitter, url: "https://twitter.com/" },
-    { icon: faLinkedin, url: "https://linkedin.com/" },
-    { icon: faFacebook, url: "https://facebook.com/" },
-  ];
-
   useEffect(() => {
+    // all icons from container
     const iconsElements = containerRef.current.querySelectorAll("a");
 
+    // initial animation state
     gsap.set(iconsElements, { y: 50, opacity: 0 });
 
+    // final animation state
     gsap.to(iconsElements, {
       y: 0,
       opacity: 1,
       stagger: 0.15,
       duration: 0.6,
-      delay: 1.5,
+      delay: 4,
       ease: "power3.out",
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 90%", // ordhek giye trigger
+        start: "top 100%",
         toggleActions: "play reverse play reverse",
       },
     });
   }, []);
 
   return (
+    // fetch items from array
     <div ref={containerRef} className="flex gap-4">
       {icons.map((item, index) => (
         <a

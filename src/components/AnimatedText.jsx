@@ -3,10 +3,11 @@ import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
 import { SplitText } from "gsap/SplitText"
 
-// gsap initialize
+// gsap plugin initialize
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 export default function AnimatedText({ as: Tag = "h2", children, className }) {
+  // refs
   const el = useRef(null)
 
   useEffect(() => {
